@@ -10,8 +10,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-4.9
-            - libgcrypt
-            - libgcrypt-devel
+            - libgcrypt20-dev
       env:
          - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
          
