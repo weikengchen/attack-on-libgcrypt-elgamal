@@ -10,13 +10,14 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-4.9
+            - libgcrypt
+            - libgcrypt-devel
       env:
          - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
          
 
 before_install:
  - eval "${MATRIX_EVAL}"
- - apt-get install libgcrypt libgcrypt-devel
-
+ 
 script:
   - python attack_libgcrypt.py
