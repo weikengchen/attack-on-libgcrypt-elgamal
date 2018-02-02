@@ -129,7 +129,7 @@ void encrypt(gcry_sexp_t *kp){
         printf("failed to store the ciphertext.\n");
         exit(1);
     }
-    fprintf(fp_a, "%s\n", elgamal_a_str);
+    fprintf(fp_a, "%s\n", (char*) elgamal_a_str);
     fclose(fp_a);
     
     err = gcry_mpi_print(GCRYMPI_FMT_HEX, elgamal_b_str, 512 / 8 * 1024, NULL, elgamal_b);
@@ -143,7 +143,7 @@ void encrypt(gcry_sexp_t *kp){
         printf("failed to store the ciphertext.\n");
         exit(1);
     }
-    fprintf(fp_b, "%s\n", elgamal_b_str);
+    fprintf(fp_b, "%s\n", (char*) elgamal_b_str);
     fclose(fp_b);
     gcry_mpi_release(plaintext);
     gcry_sexp_release(plaintext_exp);
