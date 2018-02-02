@@ -86,7 +86,7 @@ void savepp(gcry_sexp_t *kp){
         printf("failed to store the prime p.\n");
         exit(1);
     }
-    fprintf(fp_p, "%s\n", elgamal_p_str);
+    fprintf(fp_p, "%s\n", (char*) elgamal_p_str);
     fclose(fp_p);
     
     void *elgamal_y_str = malloc(512 / 8 * 1024);
@@ -105,7 +105,7 @@ void savepp(gcry_sexp_t *kp){
         printf("failed to store the public key y.\n");
         exit(1);
     }
-    fprintf(fp_y, "%s\n", elgamal_y_str);
+    fprintf(fp_y, "%s\n", (char*) elgamal_y_str);
     fclose(fp_y);
     gcry_sexp_release(elgamal_p_exp);
     gcry_sexp_release(elgamal_y_exp);
