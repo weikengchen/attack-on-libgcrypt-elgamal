@@ -3,8 +3,7 @@ Attack on the ElGamal Implementation of libgcrypt
 
 
 The authors:
-     TElgamal (https://github.com/TElgamal), who wants to be anonymous now.
-     Weikeng Chen
+     Weikeng Chen and Erik-Oliver Blass
 
 
 # Test result on Travis
